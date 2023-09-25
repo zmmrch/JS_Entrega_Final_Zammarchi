@@ -98,7 +98,7 @@ function eliminar() {
 //Funcion para llamar a la API del pronóstico del clima
 function callAPI() {
   const apiKey = "OKXC5CkeHt9WkLTOCiTLTLCj9z1htRZu";
-  const url = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/7894?apikey=${apiKey}&language=es`;
+  const url = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/7894?apikey=${apiKey}&language=es`;
 
   fetch(url)
     .then((response) => {
@@ -167,10 +167,11 @@ function conversorTemperatura(temp) {
 }
 
 //Función para deshabilitar el uso del botón "Pronóstico"
-function deshabilitarBtnPronostico(){
-  const button = document.querySelector("#btnPronostico"); 
+function deshabilitarBtnPronostico() {
+  const button = document.querySelector("#btnPronostico");
   button.addEventListener("click", () => {
-  button.classList.add("disabled");});
+    button.classList.add("disabled");
+  });
 }
 
 //Defiino una clase para representar un vehículo
